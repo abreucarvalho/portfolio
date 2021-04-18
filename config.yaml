@@ -4,18 +4,18 @@ theme: "starter-academic"
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Academic # Website name
+title: Rodrigo Abreu Carvalho # Website name
 baseurl: 'https://abreucarvalho.netlify.app/' # Website URL
-copyright: '' # Footer text, e.g. '© {year} Me'
+copyright: "&copy; Rodrigo Abreu Carvalho {year}" # Footer text, e.g. '© {year} Me'
 
 ############################
 ## LANGUAGE
 ############################
 
 defaultContentLanguage: en
-hasCJKLanguage: false
+hasCJKLanguage: false # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir: false
-removePathAccents: true
+removePathAccents: true # Workaround for https://github.com/gohugoio/hugo/issues/5687
 
 ############################
 ## MODULES
@@ -51,9 +51,9 @@ markup:
   defaultMarkdownHandler: goldmark
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: true  # Enable user to embed HTML snippets in Markdown content.
   highlight:
-    codeFences: false
+    codeFences: false # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
   tableOfContents:
     startLevel: 2
     endLevel: 3
