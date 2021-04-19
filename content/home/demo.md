@@ -39,7 +39,6 @@ design:
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 
+
+<font size=2>Foto: Rio Juruá, Amazonas - Brasil</font> <center><i class="fa fa-arrow-down" aria-hidden="true"></i></center>
