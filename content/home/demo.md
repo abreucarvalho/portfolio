@@ -12,7 +12,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 15
 
-title: Hugo Academic Theme Demo
+title: Welcome! 
 subtitle:
 
 design:
@@ -28,16 +28,12 @@ design:
     padding: ["20px", "0", "20px", "0"]
 ---
 
-Welcome to the demo of the **academic resumé template** for Wowchemy, the Website Builder for Hugo.
+<br> 
 
-[Explore similar templates](https://wowchemy.com/templates/)
+Ths is my personal website. I´m a researcher at the [Enviromental Economics and Sustainable Development Group (GEMA)]() at the [Economics Institute of the Federal University of Rio de Janeiro (IE/UFRJ).]()
 
-**Over 500,000 [Amazing Websites](https://wowchemy.com/) have Already Been Built with Wowchemy**
-
-**[Join](https://wowchemy.com/templates/) the Most Empowered Hugo Community**
+<br> 
 
 {{% callout note %}}
-This homepage section is an example of adding [elements](https://wowchemy.com/docs/content/writing-markdown-latex/) to the [*Blank* widget](https://wowchemy.com/docs/getting-started/page-builder/).
-
-Backgrounds can be applied to any section. Here, the *background* option is set give an *image parallax* effect.
+Opinions expressed here are solely my own and do not express the views or opinions of any of the institutions above mentioned.
 {{% /callout %}}
