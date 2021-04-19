@@ -18,22 +18,28 @@ subtitle:
 design:
   columns: "1"
   background:
-    image: open-book.jpg
-    image_darken: 1.0
+    image: bg-blank.jpg
+    image_darken: -1
     image_parallax: true
     image_position: center
     image_size: cover
-    text_color_light: false
+    text_color_light: true
   spacing:
     padding: ["20px", "0", "20px", "0"]
 ---
 
-<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-Ths is my personal website. I´m a researcher at the [Enviromental Economics and Sustainable Development Group (GEMA)]() at the [Economics Institute of the Federal University of Rio de Janeiro (IE/UFRJ).]()
-
-<br> 
-
-{{% callout note %}}
-Opinions expressed here are solely my own and do not express the views or opinions of any of the institutions above mentioned.
-{{% /callout %}}
