@@ -41,4 +41,5 @@ design:
 <br>
 
 
-<font size=2>Foto: Rio Juruá, Amazonas - Brasil</font> <center><i class="fa fa-arrow-down" aria-hidden="true"></i></center>
+<font size=2>Photo: Chapada dos Veadeiros, Góias - Brasil.</font><center><a href="#"><span></span><i class="fa fa-arrow-down" aria-hidden="true"></i></a></center>
+

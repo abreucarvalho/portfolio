@@ -31,6 +31,14 @@ item:
   organization_url: https://www.coursera.org
   title: Data Science
   url: ""
+- certificate_url: https://www.coursera.org/account/accomplishments/verify/HSCLEANQM67P?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course
+  date_end: ""
+  date_start: "2021-04-21"
+  description: "Johns Hopkins University' Data Science Series"
+  organization: Coursera
+  organization_url: https://www.coursera.org
+  title: Data Science
+  url: ""
 - certificate_url: https://e-certificado.com/login/visualizar?c=809530A69A278DF5583650
   date_end: ""
   date_start: "2021-01-01"

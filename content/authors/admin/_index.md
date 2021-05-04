@@ -40,4 +40,4 @@ title: Rodrigo Abreu Carvalho
 
 Economist, specializing in Environmental and Resource Economics with 2+ years of experience in academic research - working with Data Science, Econometrics and Geographical Information Systems (GIS).
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/vitae_rodrigocarvalho_pt.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/vitae_rodrigocarvalho_en.pdf" "newtab" >}}resumé{{< /staticref >}}.
