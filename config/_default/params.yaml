@@ -51,7 +51,7 @@ main_menu:
   enable: true
   align: l
   show_logo: true
-  show_language: false
+  show_language: true
   show_day_night: true
   show_search: true
   highlight_active_link: true
@@ -69,8 +69,8 @@ highlight_languages:
   - r
   - python
   - latex
-math: false
-diagram: false
+math: true
+diagram: true
 privacy_pack: false
 edit_page:
   repo_url: ''
@@ -148,3 +148,4 @@ cms:
 icon:
   pack:
     ai: false
+    
