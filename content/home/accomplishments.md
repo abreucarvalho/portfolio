@@ -23,22 +23,46 @@ date_format: Jan 2006
 #   Leave other parameters empty if not required.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
-- certificate_url: https://www.coursera.org/account/accomplishments/verify/HSCLEANQM67P?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course
-  date_end: ""
-  date_start: "2021-03-25"
+- certificate_url: https://coursera.org/share/54b392bf5417024a083d8337b6b4a0c5
+  date_end: "2021-03-09"
+  date_start: ""
   description: "Johns Hopkins University' Data Science Series"
   organization: Coursera
   organization_url: https://www.coursera.org
-  title: Data Science
-  url: ""
-- certificate_url: https://www.coursera.org/account/accomplishments/verify/HSCLEANQM67P?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course
-  date_end: ""
-  date_start: "2021-04-21"
+  title: The Data Scientist’s Toolbox
+  url: "https://www.coursera.org/specializations/jhu-data-science"
+- certificate_url: https://coursera.org/share/840d665f48402e6dab974e4872525a9d
+  date_end: "2021-04-10"
+  date_start: ""
   description: "Johns Hopkins University' Data Science Series"
   organization: Coursera
   organization_url: https://www.coursera.org
-  title: Data Science
-  url: ""
+  title: R Programming
+  url: "https://www.coursera.org/specializations/jhu-data-science"
+- certificate_url: https://coursera.org/share/5cf74ef1d89ed40f58350157834970b8
+  date_end: "2021-05-24"
+  date_start: ""
+  description: "Johns Hopkins University' Data Science Series"
+  organization: Coursera
+  organization_url: https://www.coursera.org
+  title: Getting and Cleaning Data
+  url: "https://www.coursera.org/specializations/jhu-data-science"
+- certificate_url: https://coursera.org/share/5232fd7a4a0cd363f407267027eabaae
+  date_end: "2021-06-24"
+  date_start: ""
+  description: "Johns Hopkins University' Data Science Series"
+  organization: Coursera
+  organization_url: https://www.coursera.org
+  title: Exploratory Data Analysis
+  url: "https://www.coursera.org/specializations/jhu-data-science"
+- certificate_url: https://coursera.org/share/040992fb7698be2db35ed850962181c0
+  date_end: "2021-07-13"
+  date_start: ""
+  description: "Johns Hopkins University' Data Science Series"
+  organization: Coursera
+  organization_url: https://www.coursera.org
+  title: Reproducible Research
+  url: "https://www.coursera.org/specializations/jhu-data-science"
 - certificate_url: https://e-certificado.com/login/visualizar?c=809530A69A278DF5583650
   date_end: ""
   date_start: "2021-01-01"
@@ -46,7 +70,7 @@ item:
   organization: SELPER
   organization_url: http://selperbrasil.org.br
   title: Introdução ao Geoprocessamento com TerraView 5
-  url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
+  url: http://www.selperbrasil.org.br/
 
 design:
   columns: '2' 
