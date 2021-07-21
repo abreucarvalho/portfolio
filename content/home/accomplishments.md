@@ -65,12 +65,20 @@ item:
   url: "https://www.coursera.org/specializations/jhu-data-science"
 - certificate_url: https://e-certificado.com/login/visualizar?c=809530A69A278DF5583650
   date_end: ""
-  date_start: "2021-01-01"
+  date_start: "2021-12-01"
   description: Introduction to Geographic Information Systems (GIS)
   organization: SELPER
   organization_url: http://selperbrasil.org.br
   title: Introdução ao Geoprocessamento com TerraView 5
   url: http://www.selperbrasil.org.br/
+- certificate_url: https://www.udemy.com/certificate/UC-2a3c7cc1-9feb-489e-8a06-49ceb3e826ac/
+  date_end: ""
+  date_start: "2021-03-08"
+  description: 
+  organization: SELPER
+  organization_url: http://selperbrasil.org.br
+  title: Introduction to Power BI
+  url: https://www.udemy.com/course/power-bi-completo-do-basico-ao-avancado/
 
 design:
   columns: '2' 
