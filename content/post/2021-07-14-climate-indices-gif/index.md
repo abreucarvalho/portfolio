@@ -6,7 +6,7 @@ slug: climate-indices-gif
 categories: ["R"]
 tags: ["GIF", "raster", "ggplot", "gifski"]
 subtitle: 'Create a GIF image from raster layers'
-summary: ''
+summary: 'Visualizing RasterStack or RasterBrick by making a gif image of each layer. This post also shows how to plot raster layers using ggplot.'
 authors: []
 lastmod: '2021-07-14T19:29:11-03:00'
 featured: no
@@ -16,10 +16,6 @@ image:
   preview_only: no
 projects: []
 ---
-
-<!-- ![](southamerica_wc_prec_2000to2009.gif) -->
-
-<br>
 
 # Downloanding the data sets
 
