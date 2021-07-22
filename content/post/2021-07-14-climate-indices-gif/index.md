@@ -1,27 +1,23 @@
 ---
-title: Climate Indices GIF
+title: Animate raster maps with ggplot and gifski
 author: Rodrigo Abreu Carvalho
 date: '2021-07-14'
 slug: climate-indices-gif
 categories: ["R"]
 tags: ["GIF", "raster", "ggplot", "gifski"]
-subtitle: ''
+subtitle: 'Create a GIF image from raster layers'
 summary: ''
 authors: []
 lastmod: '2021-07-14T19:29:11-03:00'
 featured: no
-image:
+image: 
   caption: ''
   focal_point: ''
   preview_only: no
 projects: []
 ---
 
-{{< toc >}}
-
-# Animate raster Maps with ggplot and gifski
-
-![](southamerica_wc_prec_2000to2009.gif)
+<!-- ![](southamerica_wc_prec_2000to2009.gif) -->
 
 <br>
 
