@@ -53,11 +53,11 @@ Of course, some of the WorldClim project data is available through the raster pa
 
 The `getData` function, with the parameters used in the chunk above, downloads a RasterStack with 12 layers!
 
-From the [documentation](https://www.worldclim.org/data/worldclim21.html):
+From the package documentation:
 
 *"The data is available at the four spatial resolutions, between 30 seconds (\~1 km2) to 10 minutes (\~340 km2). Each download is a "zip" file containing 12 GeoTiff (.tif) files, one for each month of the year (January is 1; December is 12)."* (Fick, 2017)
 
-Note that, for the gif at the beginning of this post, we used the per month data sets available at <https://www.worldclim.org/data/monthlywth.html>. 
+Note that, for the gif at the beginning of this post, we used [historical monthly weather](https://www.worldclim.org/data/monthlywth.html) data not available through the raster package. . 
 
 <br>
 
@@ -69,12 +69,12 @@ Let's visualize one of the layers:
 
     raster::plot(wc_prec_series$prec7, 
                  
-                 main = "Fig.1 Monthly Precipitation in July")
+                 main = "Fig.1 - Average Precipitation in July from 1970 to 2000")
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
-We can see, from the values parameter, that some regions achieved more than 1500 mm average precipitation in July (*prec7*) for the entire period 1970 to 2000.
+We can see, from the values parameter, that some regions achieved more than 1500 mm average precipitation in July (*prec7*).
 
 Note that the raster package also comes with a `animate` function built in:
 
@@ -84,7 +84,9 @@ Note that the raster package also comes with a `animate` function built in:
                     
                     n = 1, # number of loops
                     
-                    main = paste("Monthly Precipitation for", month.name)) # title for each layer
+                    main = paste("Average Precipitation in", 
+                                 
+                                 month.name, "from 1970 to 2000")) 
 ```
 
 The `animate` function takes a RasterStack or a RasterBrick and generates a gif using each layer as frames. Even though this is a very easy to use function, it lacks more options for editing and exporting.
@@ -106,7 +108,7 @@ The next step consists of cropping the data to the specified *loi*, using the sh
 
 
 ```r
-extent(india)
+    extent(india)
 ```
 
 ```
@@ -124,7 +126,7 @@ extent(india)
 
 
 ```r
-plot(india_wc_prec, main = "Fig.2 Monthly Precipitation - India")
+    plot(india_wc_prec, main = "Fig.2 - Average Monthly Precipitation - India")
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" />
