@@ -103,12 +103,6 @@ The next step consists of cropping the data to the specified *loi*, using the sh
     
       require(sf, quietly = TRUE)
       
-      # Identify CRS of each object
-
-        sf::st_crs(india)
-        
-        sf::st_crs(wc_prec_series)
-        
       # Transform CRS of reference maps
         
         india <- st_transform(india, crs = st_crs(wc_prec_series))
