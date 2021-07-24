@@ -118,7 +118,7 @@ The next step consists of cropping the data to the specified *loi*, using the sh
 
 ```{r cache=TRUE}
 
-    plot(india_wc_prec, main = "Fig.2 - Average Monthly Precipitation in India")
+    plot(india_wc_prec, main = "Fig.2")
 
 ```
 
@@ -141,7 +141,7 @@ In order to use `ggplot`, we need to transform the raster layers to tables.
       
 ```
 
-A few auxiliary lists are used to indicate the directory for saving, the months of each frame, and the file names. We use the pad function from `stringr` to add a zero before months names. This step guarantees that the files will be in the correct order for the animation.
+A few auxiliary lists are used to indicate the directory for saving, the months of each frame, and the file names. We use the pad function from `stringr` to add a zero to any one digit number. This step guarantees that the files will be in the correct order for the animation.
 
 ```{r eval=FALSE}
 
@@ -177,7 +177,7 @@ One last step before plotting consists of binding the tables created from each l
 
 # Plot
 
-We plot the data filling pixel values with the precipitation data on the third column of each table. The first and second columns are longitude and latitude. Note that by adding the `scale_fill_viridis_c` we are able to set the scale to a fixed maximum limit.
+We plot filling pixels values with the precipitation data on the third column of each table. The first and second columns are longitude and latitude of each pixel. Note that by adding the `scale_fill_viridis_c` we are able to set the scale to a fixed maximum limit.
 
 ```{r eval=FALSE}
 
