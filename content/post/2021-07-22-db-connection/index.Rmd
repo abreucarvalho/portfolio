@@ -67,7 +67,7 @@ Note that the `.connection_string` parameter indicates both 'mdb' and 'accdb' ex
 
 <br>
 
-Before moving on, we should retrieve the connections names. We will use it to identify from which data set the table came from.   
+Before moving on, let's retrieve the connections names. We will use it to identify from which data set a certain table came from.   
 
 ```{r eval=FALSE}
 
@@ -101,7 +101,7 @@ If we wish to identify and select some of the tables from multiple data sets, we
 
 <br>
 
-Finally, we can read the selected tables to a list, assigning names based on connections and original tables names. We access each connection, and check for the existence of any of the tables names using `dbExistsTable()`. If the table exists in that connection the function uses `assign()` to determine the name and value of the table. It also uses the `conn_ls`object created before, so that we can identify from which data base it came from. The last lines simply print a note so that we can see the progress. 
+Finally, we can read the selected tables to a list, assigning names based on connections and original tables names. We access each connection, and check for the existence of any of the tables names using `dbExistsTable()`. If the table exists in that connection the function uses `assign()` to determine the name and value of the table. It also uses the `conn_ls` object created before, so that we can identify from which data base it came from. The last lines simply print a note so that we can follow the progress. 
 
 ```{r eval=FALSE}
 
