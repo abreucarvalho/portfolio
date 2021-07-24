@@ -28,7 +28,7 @@ Microsoft Access Data Bases may contain several tables of interest. Using the `o
 
 <br>
 
-First, let´s list all the files we want to work with:
+First, let´s list all the files (data bases) we want to work with:
 
 ```{r eval=FALSE}
 
@@ -40,7 +40,7 @@ First, let´s list all the files we want to work with:
 
 <br>
 
-Opening a 'mdb' or 'accdb' file creates a temporary 'Microsoft Access Record-Locking Information (laccdb)' file in the same folder. So, before moving on, you must close all 'laccdb' files to allow a remote connection from R.
+Opening a 'mdb' or 'accdb' file creates a temporary 'Microsoft Access Record-Locking Information (laccdb)' file in the same folder. You must close all 'laccdb' files to allow for a remote connection from R.
 
 ```{r eval=FALSE}
   
@@ -63,51 +63,45 @@ Opening a 'mdb' or 'accdb' file creates a temporary 'Microsoft Access Record-Loc
       
 ```
 
-The `.connection_string` parameter indicates both 'mdb' and 'accdb' extensions. 
+Note that the `.connection_string` parameter indicates both 'mdb' and 'accdb' extensions.
 
 <br>
 
-We should retrieve connections names. Later on, we might use it to identify the tables.   
+Before moving on, we should retrieve the connections names. We will use it to identify from which data set the table came from.   
 
 ```{r eval=FALSE}
 
-  # Retrieve connections names
-    
-    conn_ls <- list()
-    
-    for (i in seq(connections)) {
+    # Retrieve connections names
       
-      conn_ls[i] <- connections[i][[1]]@info$dbname
+      conn_ls <- list()
       
-    }
+      for (i in seq(connections)) {
+        
+        conn_ls[i] <- connections[i][[1]]@info$dbname
+        
+      }
 
 ```
 
 <br>
 
-If we wish to select some of the tables from multiple data sets, we can list the names in the following way.
+If we wish to identify and select some of the tables from multiple data sets, we can list the names in the following way and then create a vector of names to subset from the list. 
 
 ```{r eval=FALSE}
 
-    # List tables
+    # List all tables from multiple connections
 
       all_tables <- lapply(connections, dbListTables)
 
-```
+    # Vector of tables names to be extracted from all data sets
 
-<br>
-
-Let´s create a vector of names to subset from the list.
-
-```{r eval=FALSE}
-
-    slct_tables <- c("Table 1", "Table 2", "Table 3")
+      slct_tables <- c("Table 1", "Table 2", "Table 3")
 
 ```
 
 <br>
 
-Now, we can read the selected tables to a list, assigning names based on connections and original tables names. We access each connection, and check for the existence of any of the tables names using `dbExistsTable()`. If the table exists in that connection the function uses `assign()` to determine the name and value of the table. It uses the `conn_ls`object created before, so that we can identify from which MSdb it came from. The last lines simply print a note so that we can identify the function progress. 
+Finally, we can read the selected tables to a list, assigning names based on connections and original tables names. We access each connection, and check for the existence of any of the tables names using `dbExistsTable()`. If the table exists in that connection the function uses `assign()` to determine the name and value of the table. It also uses the `conn_ls`object created before, so that we can identify from which data base it came from. The last lines simply print a note so that we can see the progress. 
 
 ```{r eval=FALSE}
 
@@ -130,7 +124,7 @@ Now, we can read the selected tables to a list, assigning names based on connect
 
 <br>
 
-Before moving on your code, close the connections, which will remove record locking (laccdb) files. 
+Before moving on, close all the remote connections we created, which will remove record locking (laccdb) files. 
 
 ```{r eval=FALSE}
 
