@@ -104,11 +104,113 @@ We choose India that has accentuated dry and wet seasons, for better contrast.
 
 # Crop to extent
 
-The next step consists of cropping the data to the specified *loi*, using the shape extent as reference.
+The next step consists of cropping the data to the specified *loi*, using the shape extent as reference. To do that correctly we must assure that the raster layers and the reference map have the same Coordinate Reference System (CRS). For that, we use the sf package that already incorporate PROJ4 updates to CRS parameters. When possible, is always wiser to reproject vector data instead of rasters. 
 
 
 ```r
-    extent(india)
+    # Matching the CRS projections
+    
+      require(sf, quietly = TRUE)
+```
+
+```
+## Warning: package 'sf' was built under R version 4.0.4
+```
+
+```
+## Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1
+```
+
+```r
+      # Identify CRS of each object
+
+        sf::st_crs(india)
+```
+
+```
+## Coordinate Reference System:
+##   User input: +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
+##   wkt:
+## BOUNDCRS[
+##     SOURCECRS[
+##         GEOGCRS["unknown",
+##             DATUM["World Geodetic System 1984",
+##                 ELLIPSOID["WGS 84",6378137,298.257223563,
+##                     LENGTHUNIT["metre",1]],
+##                 ID["EPSG",6326]],
+##             PRIMEM["Greenwich",0,
+##                 ANGLEUNIT["degree",0.0174532925199433],
+##                 ID["EPSG",8901]],
+##             CS[ellipsoidal,2],
+##                 AXIS["longitude",east,
+##                     ORDER[1],
+##                     ANGLEUNIT["degree",0.0174532925199433,
+##                         ID["EPSG",9122]]],
+##                 AXIS["latitude",north,
+##                     ORDER[2],
+##                     ANGLEUNIT["degree",0.0174532925199433,
+##                         ID["EPSG",9122]]]]],
+##     TARGETCRS[
+##         GEOGCRS["WGS 84",
+##             DATUM["World Geodetic System 1984",
+##                 ELLIPSOID["WGS 84",6378137,298.257223563,
+##                     LENGTHUNIT["metre",1]]],
+##             PRIMEM["Greenwich",0,
+##                 ANGLEUNIT["degree",0.0174532925199433]],
+##             CS[ellipsoidal,2],
+##                 AXIS["latitude",north,
+##                     ORDER[1],
+##                     ANGLEUNIT["degree",0.0174532925199433]],
+##                 AXIS["longitude",east,
+##                     ORDER[2],
+##                     ANGLEUNIT["degree",0.0174532925199433]],
+##             ID["EPSG",4326]]],
+##     ABRIDGEDTRANSFORMATION["Transformation from unknown to WGS84",
+##         METHOD["Geocentric translations (geog2D domain)",
+##             ID["EPSG",9603]],
+##         PARAMETER["X-axis translation",0,
+##             ID["EPSG",8605]],
+##         PARAMETER["Y-axis translation",0,
+##             ID["EPSG",8606]],
+##         PARAMETER["Z-axis translation",0,
+##             ID["EPSG",8607]]]]
+```
+
+```r
+        sf::st_crs(wc_prec_series)
+```
+
+```
+## Coordinate Reference System:
+##   User input: +proj=longlat +datum=WGS84 +no_defs 
+##   wkt:
+## GEOGCRS["unknown",
+##     DATUM["World Geodetic System 1984",
+##         ELLIPSOID["WGS 84",6378137,298.257223563,
+##             LENGTHUNIT["metre",1]],
+##         ID["EPSG",6326]],
+##     PRIMEM["Greenwich",0,
+##         ANGLEUNIT["degree",0.0174532925199433],
+##         ID["EPSG",8901]],
+##     CS[ellipsoidal,2],
+##         AXIS["longitude",east,
+##             ORDER[1],
+##             ANGLEUNIT["degree",0.0174532925199433,
+##                 ID["EPSG",9122]]],
+##         AXIS["latitude",north,
+##             ORDER[2],
+##             ANGLEUNIT["degree",0.0174532925199433,
+##                 ID["EPSG",9122]]]]
+```
+
+```r
+      # Transform CRS of reference maps
+        
+        india <- st_transform(india, crs = st_crs(wc_prec_series))
+
+    # Crop to extent
+    
+      extent(india)
 ```
 
 ```
@@ -120,13 +222,13 @@ The next step consists of cropping the data to the specified *loi*, using the sh
 ```
 
 ```r
-    india_wc_prec <- crop(wc_prec_series, india)
+      india_wc_prec <- crop(wc_prec_series, india)
 ```
 
 
 
 ```r
-    plot(india_wc_prec, main = "Fig.2 - Average Monthly Precipitation - India")
+    plot(india_wc_prec, main = "Fig.2 - Average Monthly Precipitation in India")
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" />
@@ -135,6 +237,10 @@ The next step consists of cropping the data to the specified *loi*, using the sh
 
 In order to use `ggplot`, we need to transform the raster layers to tables.
 
+
+```r
+      require(tidyr, quietly = TRUE)
+```
 
 ```
 ## 
@@ -147,12 +253,8 @@ In order to use `ggplot`, we need to transform the raster layers to tables.
 ##     extract
 ```
 
-
-
 ```r
-  require(tidyr)
-
-  rasterStack_tables <- list()
+      rasterStack_tables <- list()
                 
         for (i in seq(india_wc_prec@data@nlayers)) {
                     
@@ -162,7 +264,7 @@ In order to use `ggplot`, we need to transform the raster layers to tables.
         }  
 ```
 
-Also, a few auxiliary lists are used to indicate the directory to save each frame, the dates to indicate in the title, and the file names in order.
+A few auxiliary lists are used to indicate the directory for saving, the months of each frame, and the file names. We use the pad function from `stringr` to add a zero before months names. This step guarantees that the files will be in the correct order for the animation.
 
 
 ```r
@@ -206,7 +308,7 @@ One last step before plotting consists of binding the tables created from each l
 
 # Plot
 
-We plot the data filling each pixel with the third column of each table. The first and second columns are longitude and latitude. Note that by adding the `scale_fill_viridis_c` we are able to set the scale to a fixed value.
+We plot the data filling pixel values with the precipitation data on the third column of each table. The first and second columns are longitude and latitude. Note that by adding the `scale_fill_viridis_c` we are able to set the scale to a fixed maximum limit.
 
 
 ```r
@@ -225,7 +327,7 @@ We plot the data filling each pixel with the third column of each table. The fir
           
           scale_fill_viridis_c(dates[i], direction = -1, limits = c(0, 2088.00)) + # set scale
           
-          coord_sf(expand = TRUE) +
+          coord_sf(expand = FALSE) +
           
           labs(x = 'Longitude', y = 'Latitude',
                title = "Climate Indices",
