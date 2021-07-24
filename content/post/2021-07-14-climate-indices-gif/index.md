@@ -19,7 +19,7 @@ projects: []
 
 # Downloanding the data sets
 
-The data used here comes from the WorldClim project, and can be retrieved [here](https://www.worldclim.org/data/monthlywth.html). Note that one of the authors of the project is professor Robert J. Hijmans, he is also responsible for the [raster package](https://cran.r-project.org/web/packages/raster/index.html).
+The data used in this post comes from the WorldClim project, and can be retrieved [here](https://www.worldclim.org/data/monthlywth.html). Note that one of the authors of the project is professor Robert J. Hijmans, he is also responsible for the [raster package](https://cran.r-project.org/web/packages/raster/index.html).
 
 Of course, some of the WorldClim project data is available through the raster package...
 
@@ -111,99 +111,7 @@ The next step consists of cropping the data to the specified *loi*, using the sh
     # Matching the CRS projections
     
       require(sf, quietly = TRUE)
-```
-
-```
-## Warning: package 'sf' was built under R version 4.0.4
-```
-
-```
-## Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1
-```
-
-```r
-      # Identify CRS of each object
-
-        sf::st_crs(india)
-```
-
-```
-## Coordinate Reference System:
-##   User input: +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
-##   wkt:
-## BOUNDCRS[
-##     SOURCECRS[
-##         GEOGCRS["unknown",
-##             DATUM["World Geodetic System 1984",
-##                 ELLIPSOID["WGS 84",6378137,298.257223563,
-##                     LENGTHUNIT["metre",1]],
-##                 ID["EPSG",6326]],
-##             PRIMEM["Greenwich",0,
-##                 ANGLEUNIT["degree",0.0174532925199433],
-##                 ID["EPSG",8901]],
-##             CS[ellipsoidal,2],
-##                 AXIS["longitude",east,
-##                     ORDER[1],
-##                     ANGLEUNIT["degree",0.0174532925199433,
-##                         ID["EPSG",9122]]],
-##                 AXIS["latitude",north,
-##                     ORDER[2],
-##                     ANGLEUNIT["degree",0.0174532925199433,
-##                         ID["EPSG",9122]]]]],
-##     TARGETCRS[
-##         GEOGCRS["WGS 84",
-##             DATUM["World Geodetic System 1984",
-##                 ELLIPSOID["WGS 84",6378137,298.257223563,
-##                     LENGTHUNIT["metre",1]]],
-##             PRIMEM["Greenwich",0,
-##                 ANGLEUNIT["degree",0.0174532925199433]],
-##             CS[ellipsoidal,2],
-##                 AXIS["latitude",north,
-##                     ORDER[1],
-##                     ANGLEUNIT["degree",0.0174532925199433]],
-##                 AXIS["longitude",east,
-##                     ORDER[2],
-##                     ANGLEUNIT["degree",0.0174532925199433]],
-##             ID["EPSG",4326]]],
-##     ABRIDGEDTRANSFORMATION["Transformation from unknown to WGS84",
-##         METHOD["Geocentric translations (geog2D domain)",
-##             ID["EPSG",9603]],
-##         PARAMETER["X-axis translation",0,
-##             ID["EPSG",8605]],
-##         PARAMETER["Y-axis translation",0,
-##             ID["EPSG",8606]],
-##         PARAMETER["Z-axis translation",0,
-##             ID["EPSG",8607]]]]
-```
-
-```r
-        sf::st_crs(wc_prec_series)
-```
-
-```
-## Coordinate Reference System:
-##   User input: +proj=longlat +datum=WGS84 +no_defs 
-##   wkt:
-## GEOGCRS["unknown",
-##     DATUM["World Geodetic System 1984",
-##         ELLIPSOID["WGS 84",6378137,298.257223563,
-##             LENGTHUNIT["metre",1]],
-##         ID["EPSG",6326]],
-##     PRIMEM["Greenwich",0,
-##         ANGLEUNIT["degree",0.0174532925199433],
-##         ID["EPSG",8901]],
-##     CS[ellipsoidal,2],
-##         AXIS["longitude",east,
-##             ORDER[1],
-##             ANGLEUNIT["degree",0.0174532925199433,
-##                 ID["EPSG",9122]]],
-##         AXIS["latitude",north,
-##             ORDER[2],
-##             ANGLEUNIT["degree",0.0174532925199433,
-##                 ID["EPSG",9122]]]]
-```
-
-```r
+      
       # Transform CRS of reference maps
         
         india <- st_transform(india, crs = st_crs(wc_prec_series))

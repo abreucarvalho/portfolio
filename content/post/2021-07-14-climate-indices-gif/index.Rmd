@@ -19,7 +19,7 @@ projects: []
 
 # Downloanding the data sets
 
-The data used here comes from the WorldClim project, and can be retrieved [here](https://www.worldclim.org/data/monthlywth.html). Note that one of the authors of the project is professor Robert J. Hijmans, he is also responsible for the [raster package](https://cran.r-project.org/web/packages/raster/index.html).
+The data used in this post comes from the WorldClim project, and can be retrieved [here](https://www.worldclim.org/data/monthlywth.html). Note that one of the authors of the project is professor Robert J. Hijmans, he is also responsible for the [raster package](https://cran.r-project.org/web/packages/raster/index.html).
 
 Of course, some of the WorldClim project data is available through the raster package...
 
