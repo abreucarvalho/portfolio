@@ -26,7 +26,7 @@ item:
 - certificate_url: https://coursera.org/share/54b392bf5417024a083d8337b6b4a0c5
   date_end: ""
   date_start: "2021-03-09"
-  description: "Johns Hopkins University' Data Science Series"
+  description: "Johns Hopkins University' Data Science Specialization"
   organization: Coursera
   organization_url: https://www.coursera.org
   title: The Data Scientist’s Toolbox
@@ -34,7 +34,7 @@ item:
 - certificate_url: https://coursera.org/share/840d665f48402e6dab974e4872525a9d
   date_end: ""
   date_start: "2021-04-10"
-  description: "Johns Hopkins University' Data Science Series"
+  description: "Johns Hopkins University' Data Science Specialization"
   organization: Coursera
   organization_url: https://www.coursera.org
   title: R Programming
@@ -42,7 +42,7 @@ item:
 - certificate_url: https://coursera.org/share/5cf74ef1d89ed40f58350157834970b8
   date_end: ""
   date_start: "2021-05-24"
-  description: "Johns Hopkins University' Data Science Series"
+  description: "Johns Hopkins University' Data Science Specialization"
   organization: Coursera
   organization_url: https://www.coursera.org
   title: Getting and Cleaning Data
@@ -50,7 +50,7 @@ item:
 - certificate_url: https://coursera.org/share/5232fd7a4a0cd363f407267027eabaae
   date_end: ""
   date_start: "2021-06-24"
-  description: "Johns Hopkins University' Data Science Series"
+  description: "Johns Hopkins University' Data Science Specialization"
   organization: Coursera
   organization_url: https://www.coursera.org
   title: Exploratory Data Analysis
@@ -58,7 +58,7 @@ item:
 - certificate_url: https://coursera.org/share/040992fb7698be2db35ed850962181c0
   date_end: ""
   date_start: "2021-07-13"
-  description: "Johns Hopkins University' Data Science Series"
+  description: "Johns Hopkins University' Data Science Specialization"
   organization: Coursera
   organization_url: https://www.coursera.org
   title: Reproducible Research

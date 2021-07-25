@@ -8,11 +8,11 @@ education:
 email: ""
 highlight_name: false
 interests:
-- Economics
+- Econometrics
 - Environmental and Resource Economics
 - Sustainable Development
 organizations:
-- name: Universidade Federal do Rio de Janeiro 
+- name: Universidade Federal do Rio de Janeiro (UFRJ)
   url: https://ufrj.br/en/
 role: Bachelor Degree in Economic Sciences 
 social:
@@ -40,4 +40,4 @@ title: Rodrigo Abreu Carvalho
 
 Economist, specializing in Environmental and Resource Economics with 2+ years of experience in academic research - working with Data Science, Econometrics and Geographical Information Systems (GIS).
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/vitae_rodrigocarvalho_en.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Vitae_RodrigoCarvalho_Eng.pdf" "newtab" >}}resume{{< /staticref >}}.
