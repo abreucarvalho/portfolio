@@ -1,16 +1,21 @@
 ---
-title: Animate raster maps with ggplot and gifski
-author: Rodrigo Abreu Carvalho
+title: "Animate raster maps with ggplot and gifski"
+author: "Rodrigo Abreu Carvalho"
 date: '2021-07-14'
 slug: climate-indices-gif
-categories: ["R"]
-tags: ["GIF", "raster", "ggplot", "gifski"]
-subtitle: 'Create a GIF image from raster layers'
-summary: 'Visualizing RasterStack or RasterBrick by making a gif image of each layer. This post also shows how to plot raster layers using ggplot.'
+categories: R
+tags:
+- GIF
+- raster
+- ggplot
+- gifski
+subtitle: Create a GIF image from raster layers
+summary: Visualizing RasterStack or RasterBrick by making a gif image of each layer.
+  This post also shows how to plot raster layers using ggplot.
 authors: []
 lastmod: '2021-07-14T19:29:11-03:00'
 featured: no
-image: 
+image:
   caption: ''
   focal_point: ''
   preview_only: no
