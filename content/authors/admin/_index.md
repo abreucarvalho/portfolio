@@ -5,12 +5,13 @@ education:
   - course: Bachelor Degree in Economic Sciences 
     institution: Universidade Federal do Rio de Janeiro (UFRJ)
     year: 2021
-email: ""
+email: "abreucarvalho.rodrigo@gmail.com"
 highlight_name: false
 interests:
-- Econometrics
+- Impact evaluation of public policies
 - Environmental and Resource Economics
 - Sustainable Development
+- Econometrics
 organizations:
 - name: Universidade Federal do Rio de Janeiro (UFRJ)
   url: https://ufrj.br/en/
